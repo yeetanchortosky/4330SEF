@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #12110e;
+  --color-surface: #1c1a16;
+  --color-surface-2: #26231c;
+  --color-fg: #f3efe6;
+  --color-muted: #a8a093;
+  --color-faint: #6f685e;
+  --color-line: #3a342c;
+  --color-copper: #e08a45;
+  --color-copper-ink: #2a160c;
+  --color-paper: #f4efe6;
+  --color-ink: #1c1915;
+  --color-paper-dim: #e7e0d4;
+  --font-sans: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --radius-md: 0.75rem;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html {
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: var(--font-sans);
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  ::selection {
+    background: var(--color-copper);
+    color: var(--color-copper-ink);
+  }
+}
+
+@utility font-display {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+}
