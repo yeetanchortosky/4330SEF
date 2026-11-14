@@ -1,0 +1,41 @@
+{
+  "model": "LightGCN",
+  "dataset": "ml-1m",
+  "seed": 2020,
+  "epochs_override": null,
+  "elapsed_seconds": 5103.887799978256,
+  "use_gpu": true,
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce GTX 1660",
+  "machine": "DESKTOP-951EVM3",
+  "best_epoch": 125,
+  "stopped_epoch": 136,
+  "started_at_hkt": "2026-11-14 21:18:08",
+  "finished_at_hkt": "2026-11-14 22:43:17",
+  "checkpoint": "D:\\4330SEF\\saved\\LightGCN-Nov-14-2026_21-18-31.pth",
+  "result": {
+    "best_valid_score": 0.2023,
+    "valid_score_bigger": true,
+    "best_valid_result": {
+      "recall@10": 0.1643,
+      "recall@20": 0.2537,
+      "ndcg@10": 0.2023,
+      "ndcg@20": 0.2208,
+      "hit@10": 0.7143,
+      "hit@20": 0.8228,
+      "mrr@10": 0.3613,
+      "mrr@20": 0.369
+    },
+    "test_result": {
+      "recall@10": 0.1857,
+      "recall@20": 0.2777,
+      "ndcg@10": 0.2505,
+      "ndcg@20": 0.2615,
+      "hit@10": 0.7294,
+      "hit@20": 0.8319,
+      "mrr@10": 0.432,
+      "mrr@20": 0.4394
+    }
+  },
+  "note": "Official LightGCN ml-1m run on DESKTOP-951EVM3 (GTX 1660). Best validation at epoch 125; training early-stopped after epoch 136. The checkpoint remains on that computer and is not in this commit."
+}

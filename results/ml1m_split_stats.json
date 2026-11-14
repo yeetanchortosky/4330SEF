@@ -1,0 +1,49 @@
+{
+  "dataset": "ml-1m",
+  "source": {
+    "archive": "https://files.grouplens.org/datasets/movielens/ml-1m.zip",
+    "note": "RecBole's processed S3 URL returned HTTP 403 here. Atomic files were converted from the official GroupLens ratings.dat, movies.dat, and users.dat with scripts/convert_movielens_1m.py."
+  },
+  "protocol": {
+    "val_interval_rating": "[3,inf)",
+    "split": "RS 8:1:1",
+    "order": "RO",
+    "mode": "full",
+    "seed": 2020,
+    "valid_metric": "NDCG@10",
+    "split_method": "dataset.build() \u2014 same 8:1:1 split as training; no model was trained.",
+    "seed_note": "init_seed(2020, True) is called before dataset.build() because eval_args.order is RO (shuffle then cut). Without that call the item slices are not reproducible."
+  },
+  "dataset_summary": {
+    "n_users_including_pad": 6040,
+    "n_items_including_pad": 3629,
+    "n_users_excl_pad": 6039,
+    "n_items_excl_pad": 3628,
+    "n_interactions_after_filters": 836478,
+    "n_train_interactions": 674674,
+    "n_valid_interactions": 80902,
+    "n_test_interactions": 80902,
+    "sparsity": 0.9618380448885815
+  },
+  "train_split": {
+    "users_with_at_least_one_train_edge": 6039,
+    "items_with_at_least_one_train_edge": 3600,
+    "users_with_zero_train_edges": 0,
+    "items_with_zero_train_edges": 28,
+    "cold_users_le_5": 2,
+    "warm_users_gt_5": 6037,
+    "cold_items_le_5": 372,
+    "warm_items_gt_5": 3228,
+    "note": "Cold is a natural count on the training split only (threshold 5). Padding id 0 is excluded. This is not a graded metric table."
+  },
+  "atomic_files": {
+    "ml-1m.inter": 21593561,
+    "ml-1m.item": 155912,
+    "ml-1m.user": 110277
+  },
+  "decision": {
+    "date": "2026-11-14",
+    "headline": "rarely seen items on ml-1m",
+    "detail": "The group chose to headline the ml-1m cold analysis on items with <= 5 training edges (372) and to report items with zero training edges (28) as a separate slice. Natural cold users (2) are logged only and are not a result table. The 18-user truncated browser cohort is not reused."
+  }
+}

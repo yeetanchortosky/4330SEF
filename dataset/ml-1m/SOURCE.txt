@@ -1,0 +1,7 @@
+Atomic files converted from the official GroupLens MovieLens 1M archive
+https://files.grouplens.org/datasets/movielens/ml-1m.zip
+RecBole's processed S3 URL returned HTTP 403 from the project machine, so the official
+ratings.dat / movies.dat / users.dat were mapped to RecBole atomic format
+matching dataset_example/ml-100k (tab-separated typed headers).
+The original zip is not committed. These atomic files are tracked in this private repo
+so the graded split can be reproduced.

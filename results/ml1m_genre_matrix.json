@@ -1,0 +1,33 @@
+{
+  "shape": [
+    3629,
+    18
+  ],
+  "n_items_including_pad": 3629,
+  "n_genres": 18,
+  "genre_names": [
+    "Animation",
+    "Children's",
+    "Comedy",
+    "Adventure",
+    "Fantasy",
+    "Romance",
+    "Drama",
+    "Action",
+    "Crime",
+    "Thriller",
+    "Horror",
+    "Sci-Fi",
+    "Documentary",
+    "War",
+    "Musical",
+    "Mystery",
+    "Film-Noir",
+    "Western"
+  ],
+  "normalization": "L1 on rows with at least one genre; padding row 0 is zeros",
+  "alignment": "Same item id space as a LightGCN run with config/base.yaml (interactions only). Row i is RecBole internal item id i. Do not add item features to load_col during training or n_items will grow and this table will not line up.",
+  "items_with_no_genre": 0,
+  "items_missing_from_item_file": 0,
+  "note": "Built from ml-1m.item class tokens looked up by raw item id. Not a graded result."
+}
