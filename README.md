@@ -9,6 +9,8 @@ The browser app is Orderline.
 - **Slides** is the 5.5-minute talk.
 - **Manual** is the operator’s guide, the RecBole subclasses, and the paper-to-code notes.
 
+The `Python` branch keeps this app and adds a numpy port of the trainer under [python/](python/README.md). `python -m rec.selftest` is the check that the port runs. It is the same 66-user pilot, not the graded ml-1m table.
+
 ## Run
 
 ```bash

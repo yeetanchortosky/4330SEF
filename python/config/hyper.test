@@ -1,0 +1,4 @@
+# hyper.test — one factor on top of the tuned point
+n_layers choice [1,2,3,4]
+reg_weight choice [1e-5,1e-4,1e-3]
+learning_rate choice [0.005,0.002,0.001]

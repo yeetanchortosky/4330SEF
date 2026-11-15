@@ -1,0 +1,4 @@
+# config/lightgcn.yaml
+# Start here. RecBole-GNN's best ml-1m point, not the library default.
+n_layers: 3
+reg_weight: 1e-4
